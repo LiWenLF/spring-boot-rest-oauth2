@@ -1,0 +1,214 @@
+{
+	"variables": [],
+	"info": {
+		"name": "oauth2",
+		"_postman_id": "850984ec-ce97-0dee-aa7b-17c35250002c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/oauth/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "clientapp",
+						"password": "123456",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "http://localhost:8080/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Y2xpZW50YXBwOjEyMzQ1Ng==",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "spring",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "roy",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "scope",
+							"value": "read write",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "123456",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "clientapp",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/greeting",
+			"request": {
+				"url": "http://localhost:8080/greeting",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 9c71b806-5e04-4d12-98a7-aa02bea024df",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/home",
+			"request": {
+				"url": "http://localhost:8080/home",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 68359122-d3d8-48f4-9db9-b21144facd7d",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/oauth/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "mobile",
+						"password": "123456",
+						"saveHelperData": false,
+						"showPassword": false
+					}
+				},
+				"url": "http://localhost:8080/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bW9iaWxlOjEyMzQ1Ng==",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "123456",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "mobile",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "refresh_token",
+							"value": "8ecc16f7-56c8-4dba-80fc-d1f442af067a",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "roy",
+							"type": "text",
+							"enabled": false
+						},
+						{
+							"key": "password",
+							"value": "spring",
+							"type": "text",
+							"enabled": false
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 28fe8a3c-65b0-4157-8597-d56503d907e7",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
